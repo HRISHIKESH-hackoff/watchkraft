@@ -30,7 +30,7 @@ nav ul li a:hover {
     height: 100vh;
     width: 100%;
     position: relative;
-    background: url("https://img.freepik.com/premium-photo/close-up-plant_1048944-9287125.jpg?ga=GA1.1.1341701790.1741798637&semt=ais_authors_boost");
+    background: url("https://img.freepik.com/premium-photo/close-u-plant_1048944-9287125.jpg?ga=GA1.1.1341701790.1741798637&semt=ais_authors_boost");
     background-position: center 65%;
     background-size: cover;
     background-attachment: fixed;
@@ -92,6 +92,204 @@ nav ul li a:hover {
   
 
 /*//////////////////*/
+.cardbg {
+    margin: 0;
+    padding: 0;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQKf5uHo-1ixtHYx31cMq-QXkDL5iLsrMQeg&s");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* Parent container for the divs */
+.flex-container {
+    display: flex;
+    gap: 20px; /* Spacing between divs */
+    flex-wrap: wrap; /* Ensures wrapping on small screens */
+    justify-content: center;
+    max-width: 90%;
+}
+
+/* Style for child divs */
+.flex-container > div {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1 1 300px; /* Makes them flexible and responsive */
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .cardbg {
+        flex-direction: column; /* Stacks items vertically */
+        align-items: center; /* Centers items */
+    }
+
+    .flex-container > div {
+        width: 100%; /* Full width on small screens */
+    }
+}
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card-list .card-item {
+    background: #ffffffa9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: border 0.5s ease, transform 0.3s ease;
+}
+
+.card-list .card-item:hover {
+    border: 2px solid #000;
+    transform: translateY(-5px);
+}
+
+.card-list .card-item img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card-list span {
+    display: inline-block;
+    background: #f7dff550;
+    margin-top: 20px;
+    padding: 8px 15px;
+    font-size: 0.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.card-list .developer {
+    background-color: #050131c9; 
+    color: white;
+}   
+.card-list .designer {
+    background-color: #3f013d;
+    color: white;
+}
+.card-list .editor {
+    background-color: #012f13; 
+    color: white;
+}
+
+.card-item h3 {
+    color: #0b0213;
+    font-size: 1.4rem;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.card-item .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-35deg);
+    height: 40px;
+    width: 40px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-top: 30px;
+    transition: 0.2s ease;
+}
+
+.card-list .card-item:hover .arrow {
+    background: #000;
+    color: #fff; 
+}
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+    .card-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        margin: 50px auto;
+        padding: 15px;
+    }
+
+    .card-list .card-item {
+        padding: 15px;
+    }
+
+    .card-item h3 {
+        font-size: 1.3rem;
+        margin-top: 15px;
+    }
+
+    .card-item .arrow {
+        height: 35px;
+        width: 35px;
+        margin-top: 20px;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .card-list {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 15px;
+        margin: 30px auto;
+    }
+
+    .card-list .card-item {
+        padding: 12px;
+    }
+
+    .card-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .card-item .arrow {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+
+/***********/
+.section-title {
+    text-align: center;  /* Aligns text to the center */
+    margin: 50px 0;
+  }
+  
+  .section-title .small-text {
+    font-size: 18px;      /* Small size for 'Explore' */
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #333;          /* Darker color for contrast */
+    display: block;       /* Places it above 'Gallery' */
+    letter-spacing: 2px;
+  }
+  
+  .section-title .large-text {
+    font-size: 60px;      /* Large size for 'Gallery' */
+    font-weight: 700;
+    color: grey;          /* Grey color for 'Gallery' */
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 3px;
+    margin-top: -50px;
+  }
+  
 
 
 nav{
